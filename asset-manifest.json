@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CookBook-client/static/css/main.0cd6701a.css",
-    "main.js": "/CookBook-client/static/js/main.4e3c71a8.js",
+    "main.js": "/CookBook-client/static/js/main.2a754714.js",
     "static/js/787.7613f31d.chunk.js": "/CookBook-client/static/js/787.7613f31d.chunk.js",
     "index.html": "/CookBook-client/index.html",
     "main.0cd6701a.css.map": "/CookBook-client/static/css/main.0cd6701a.css.map",
-    "main.4e3c71a8.js.map": "/CookBook-client/static/js/main.4e3c71a8.js.map",
+    "main.2a754714.js.map": "/CookBook-client/static/js/main.2a754714.js.map",
     "787.7613f31d.chunk.js.map": "/CookBook-client/static/js/787.7613f31d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0cd6701a.css",
-    "static/js/main.4e3c71a8.js"
+    "static/js/main.2a754714.js"
   ]
 }
