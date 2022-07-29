@@ -1,7 +1,7 @@
 {
   "name": "cook_book",
   "version": "0.1.0",
-  "homepage": "https://code-soham.github.io/cookBook/",
+  "homepage": "https://code-soham.github.io/CookBook-client/",
   "private": true,
   "dependencies": {
     "@cloudinary/react": "^1.4.1",
