@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/user/a3b47685-64e4-451c-9f82-029ff94c4c72/project/c69ec15c-6bcf-488c-91bf-435989136a05.svg)](https://wakatime.com/badge/user/a3b47685-64e4-451c-9f82-029ff94c4c72/project/c69ec15c-6bcf-488c-91bf-435989136a05)
 # Cook Book - Recipe Management Application
 ### Live Link - <a href="https://code-soham.github.io/CookBook-client/">Smash Me</a> <br/>
 ### Demonstration Video - <a href="https://www.youtube.com/watch?v=RAAL4QOxF1g">Smash Me Harder</a>
