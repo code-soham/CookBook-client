@@ -8,7 +8,7 @@ import axios from "axios";
 export default function Recipe(props) {
   const { id } = useParams();
   const [data, setData] = useState();
-  const [imgs, setImgs] = useState([]);
+  const [imgs, setImgs] = useState([]);//eslint-disable-line
   useEffect(() => {
     axios({
       method: "post",
@@ -21,7 +21,7 @@ export default function Recipe(props) {
         setData(res.data.recipe);
         console.log(props.uid._id)
         console.log(res.data.recipe.userId)
-        res.data?.recipe.images.map((img) => {
+        res.data?.recipe.images.map((img) => {//eslint-disable-line
           let cld = new Cloudinary({
             cloud: {
               cloudName: "jgec",
@@ -35,7 +35,7 @@ export default function Recipe(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, [id]);
+  }, [id]);//eslint-disable-line
   return (
     <Box
       style={{

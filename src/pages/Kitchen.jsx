@@ -20,7 +20,7 @@ export default function Kitchen(props) {
       .catch(function (error) {
         console.log(error);
       });
-  }, []); //eslint-disable-lineX
+  }, []); //eslint-disable-line
   return (
     <Box
       style={{

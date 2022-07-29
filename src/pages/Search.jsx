@@ -27,7 +27,7 @@ export default function Search(props) {
       .catch(function (error) {
         console.log(error);
       });
-  }, [query.query]); //eslint-disable-lineX
+  }, [query.query]); //eslint-disable-line
   return (
     <Box
       style={{
