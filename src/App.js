@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Kitchen from "./pages/Kitchen";
 import EditRecipe from "./pages/EditRecipe";
 import AddRecipe from "./pages/AddRecipe";
@@ -33,6 +34,17 @@ function App() {
                   setPassword={setPassword}
                 />
               </Protected>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <Register
+                authenticated={authenticated}
+                setAuthenticated={setAuthenticated}
+                uid={uid}
+                setUid={setUid}
+              />
             }
           />
           <Route
