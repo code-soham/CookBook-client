@@ -1,3 +1,13 @@
+[![wakatime](https://wakatime.com/badge/user/a3b47685-64e4-451c-9f82-029ff94c4c72/project/c69ec15c-6bcf-488c-91bf-435989136a05.svg)](https://wakatime.com/badge/user/a3b47685-64e4-451c-9f82-029ff94c4c72/project/c69ec15c-6bcf-488c-91bf-435989136a05)
+# Cook Book - Recipe Management Application
+### Live Link - <a href="https://code-soham.github.io/CookBook-client/">Smash Me</a> <br/>
+### Demonstration Video - <a href="https://www.youtube.com/watch?v=RAAL4QOxF1g">Smash Me Harder</a>
+<a href="https://imgur.com/YW9NwZv"><img src="https://i.imgur.com/YW9NwZv.jpg" title="source: imgur.com" style="height:200px;width:200px;margin:auto;" /></a>
+### Code Stash
+Client : <a href="https://github.com/code-soham/CookBook-client">Hit</a> <br/>
+Server : <a href="https://github.com/code-soham/CookBook-backend">Hit</a>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
