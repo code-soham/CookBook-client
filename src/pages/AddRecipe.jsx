@@ -29,22 +29,33 @@ export default function AddRecipe(props) {
   const [images, setImages] = useState([]);
   const [imgFiles, setImgFiles] = useState([]);
   async function uploadImages() {
-    await Promise.all(
-      imgFiles.map(async (file) => {
-        let formData = new FormData();
-        formData.append("image", file);
-        const result = await axios({
-          method: "post",
-          url: process.env.REACT_APP_API + "addImage/",
-          data: formData,
-        });
-        recipe.images.push({
-          cloudinary_id: result.data.cloudinary_id,
-          url: result.data.url,
-        });
-      })
-    );
-    uploadRecipe();
+    if (
+      recipe.name === "" ||
+      recipe.description === "" ||
+      recipe.ingredients.length === 0 ||
+      recipe.steps.length === 0 ||
+      imgFiles.length === 0
+    ) {
+      alert("Please fill all fields");
+      return;
+    } else {
+      await Promise.all(
+        imgFiles.map(async (file) => {
+          let formData = new FormData();
+          formData.append("image", file);
+          const result = await axios({
+            method: "post",
+            url: process.env.REACT_APP_API + "addImage/",
+            data: formData,
+          });
+          recipe.images.push({
+            cloudinary_id: result.data.cloudinary_id,
+            url: result.data.url,
+          });
+        })
+      );
+      uploadRecipe();
+    }
   }
   async function uploadRecipe() {
     console.log(recipe);

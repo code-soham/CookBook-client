@@ -87,7 +87,7 @@ function App() {
             path="/search/:query"
             element={
               <Protected redirect={!authenticated} path="/">
-                <Search />
+                <Search uid={uid} />
               </Protected>
             }
           />

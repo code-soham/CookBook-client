@@ -50,7 +50,7 @@ export default function Search(props) {
         }}
       >
         {myData?.map((item, key) => (
-          <RecipeReviewCard item={item} key={key} />
+          <RecipeReviewCard item={item} key={key} currentUid={props.uid._id} />
         ))}
       </div>
       '

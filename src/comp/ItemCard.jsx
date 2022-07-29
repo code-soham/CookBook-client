@@ -15,6 +15,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { Link } from "react-router-dom";
 
 export default function RecipeReviewCard(props) {
+  console.log(props);
   console.log(props.item.images[0]);
   const cld = new Cloudinary({
     cloud: {
@@ -91,8 +92,15 @@ export default function RecipeReviewCard(props) {
         >
           <DownloadIcon />
         </IconButton>
-        <IconButton color="warning" aria-label="edit">
-          <Link to={`/editRecipe/${props.item._id}`}>
+        <IconButton
+          aria-label="edit"
+          disabled={props.currentUid !== props.item.userId}
+          color={props.currentUid === props.item.userId ? "primary" : "default"}
+        >
+          <Link
+            style={{ textDecoration: "none", color: "inherit" }}
+            to={`/editRecipe/${props.item._id}`}
+          >
             <EditIcon />
           </Link>
         </IconButton>

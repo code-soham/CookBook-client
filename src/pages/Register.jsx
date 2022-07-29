@@ -6,7 +6,7 @@ import {
   Button,
   TextField,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 export default function Register(props) {
@@ -16,7 +16,25 @@ export default function Register(props) {
     email: "",
     password: "",
   });
+  function ValidateEmail(mail) {
+    if (
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(// eslint-disable-line
+        mail
+      )
+    ) {
+      return true;
+    }
+    alert("You have entered an invalid email address!");
+    return false;
+  }
   async function register() {
+    if (user.username === "" || user.email === "" || user.password === "") {
+      alert("Please fill all the fields");
+      return;
+    }
+    if (ValidateEmail(user.email) === false) {
+      return;
+    }
     await axios({
       method: "post",
       url: process.env.REACT_APP_API + "register/",
@@ -76,18 +94,21 @@ export default function Register(props) {
           <TextField
             label="Username"
             variant="standard"
+            autoComplete="off"
             type={"username"}
             onChange={(e) => setUser({ ...user, username: e.target.value })}
           />
           <TextField
             label="Email Address"
             variant="standard"
+            autoComplete="off"
             type={"email"}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
           />
           <TextField
             label="Password"
             variant="standard"
+            autoComplete="new-password"
             type={"password"}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
@@ -99,6 +120,20 @@ export default function Register(props) {
           >
             Register
           </Button>
+          <Typography variant="body2">
+            Already an User?{" "}
+            <Link
+              to={"/"}
+              style={{
+                textDecoration: "none",
+                color: "blue",
+                fontWeight: "bold",
+                fontSize: "1.2rem",
+              }}
+            >
+              Login
+            </Link>
+          </Typography>
         </CardContent>
       </Card>
     </Paper>
